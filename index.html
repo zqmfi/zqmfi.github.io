@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Adapter</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(-45deg, #00bfff, #1e90ff, #00bfff, #1e90ff);
+            background-size: 400% 400%;
+            animation: gradientFlow 10s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+        }
+        
+        @keyframes gradientFlow {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .custom-button {
+            background-color: black;
+            color: white;
+            border: 3px solid blue;
+            padding: 25px 60px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 24px;
+            min-width: 300px;
+            text-align: center;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+        
+        .custom-button:hover {
+            transform: scale(0.95);
+            background-color: #0055ff;
+        }
+    </style>
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}">
+</head>
+<body>
+    <div class="button-container">
+        <a href="https://t.me/+DMFwGVluosJiODMy" class="custom-button">PROJECT</a>
+        <a href="https://t.me/+1iEC1_jyoCFiNWUy" class="custom-button">WORKS</a>
+        <a href="https://t.me/w3brape" class="custom-button">CONTACT</a>
+    </div>
+</body>
+</html>
